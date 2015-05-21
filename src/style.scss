@@ -1,0 +1,188 @@
+/* var */
+$red: hsl(360,54%,56%);
+$red-darken: darken($red, 10%);
+$green: hsl(150,33%,45%);
+$beige: hsl(44,60%,95%);
+$black: hsl(0,0%,30%);
+
+/* elements */
+html {
+  font-family: "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-size: 100%;
+  color: $black;
+  line-height: 1.6;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $beige;
+}
+
+a {
+  color: $black;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* layout */
+#header {
+  margin: 3em 0;
+}
+
+#main {
+  margin: 3em auto;
+  max-width: 39em;
+}
+
+#footer {
+  margin-top: 6em;
+  padding-top: 1em;
+  border-top: 2px solid $green;
+}
+
+.l-frame {
+  overflow: hidden;
+  margin: 1em;
+  padding: 1em;
+  border: 2px solid $green;
+}
+
+.l-content {
+  margin: 3em 0;
+  &::after {
+    content: "";
+    display: block;
+    margin: 3em auto 0;
+    max-width: 8em;
+    height: 2px;
+    background-color: $black;
+  }
+  &:last-child::after {
+    content: normal;
+  }
+}
+
+/* module */
+.deco-frame {
+  border-image-source: url(images/corner-deco.png);
+  border-image-slice: 64;
+  border-image-repeat: round;
+  border-image-width: 32px;
+}
+
+.phrase {
+  overflow: hidden;
+  width: 3em;
+}
+
+.phrase-word {
+  float: left;
+  display: block;
+  width: 50%;
+  height: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.phrase-word.is-noise {
+  color: transparent;
+  background-color: $red;
+}
+
+.definition {
+  text-align: center;
+}
+
+.definition-list {
+  margin-bottom: 0;
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin-left: 0;
+  }
+}
+
+.definition-note {
+  font-size: smaller;
+}
+
+.sheet {
+  overflow: hidden;
+  margin-top: 3em;
+  margin-right: -3em;
+  margin-bottom: -3em;
+  padding-left: 0;
+  list-style-type: none;
+  li {
+    float: left;
+    margin-right: 3em;
+    margin-bottom: 3em;
+    cursor: pointer;
+  }
+}
+
+.contact {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.contact-lead {
+  margin: 1em auto;
+  max-width: 33em;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: 2px;
+  background-color: $red;
+  color: $beige;
+  vertical-align: middle;
+  text-decoration: none;
+  &:hover {
+    background-color: $red-darken;
+    transition: background-color .2s linear;
+  }
+}
+
+/* site */
+.site-title {
+  font-size: 1em;
+  .phrase {
+    margin: 0 auto;
+    width: 8em;
+    height: 8em;
+    background-image: url(images/read-direction.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .phrase-word {
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.35;
+  }
+}
+
+.site-copyright {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $green;
+  text-align: center;
+  font-size: smaller;
+}
+
