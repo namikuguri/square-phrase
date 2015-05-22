@@ -112,7 +112,21 @@ em {
       display: block;
       margin-bottom: .5em;
       text-align: center;
-      line-height: 1; }
+      line-height: 1;
+      color: #cb5252; }
+
+.sheet-button {
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: 2px;
+  background-color: #cb5252;
+  color: #faf6eb;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer; }
+  .sheet-button:hover {
+    background-color: #b53636;
+    transition: background-color .2s linear; }
 
 .contact {
   margin: 1em 0;
@@ -126,12 +140,13 @@ em {
   display: inline-block;
   padding: .5em 1em;
   border-radius: 2px;
-  background-color: #cb5252;
+  background-color: #4d9973;
   color: #faf6eb;
   vertical-align: middle;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   .contact-button:hover {
-    background-color: #b53636;
+    background-color: #3c7759;
     transition: background-color .2s linear; }
 
 /* site */

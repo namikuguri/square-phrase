@@ -2,6 +2,7 @@
 $red: hsl(360,54%,56%);
 $red-darken: darken($red, 10%);
 $green: hsl(150,33%,45%);
+$green-darken: darken($green, 10%);
 $beige: hsl(44,60%,95%);
 $black: hsl(0,0%,30%);
 
@@ -140,7 +141,23 @@ em {
       margin-bottom: .5em;
       text-align: center;
       line-height: 1;
+      color: $red;
     }
+  }
+}
+
+.sheet-button {
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: 2px;
+  background-color: $red;
+  color: $beige;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $red-darken;
+    transition: background-color .2s linear;
   }
 }
 
@@ -158,12 +175,13 @@ em {
   display: inline-block;
   padding: .5em 1em;
   border-radius: 2px;
-  background-color: $red;
+  background-color: $green;
   color: $beige;
   vertical-align: middle;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
-    background-color: $red-darken;
+    background-color: $green-darken;
     transition: background-color .2s linear;
   }
 }
