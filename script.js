@@ -12,12 +12,14 @@ $(function() {
     var openWord = 'すべて開く';
     var closeWord = 'すべて隠す';
 
-    triggerTarget.toggleClass('is-noise');
-    if ($(this).text() == closeWord) {
-      $(this).text(openWord);
-    } else {
+    if ($(this).text() == openWord) {
+      triggerTarget.removeClass('is-noise');
       $(this).text(closeWord);
+      trigger.css('cursor', 'inherit');
+    } else {
+      triggerTarget.addClass('is-noise');
+      $(this).text(openWord);
+      trigger.css('cursor', 'pointer');
     };
-    trigger.css('cursor', 'inherit');
   });
 });
